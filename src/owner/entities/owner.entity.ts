@@ -14,6 +14,6 @@ export class Owner {
   name: string;
 
   @OneToMany(() => Pet, (pet) => pet.owner)
-  @Field(() => [Pet])
+  @Field(() => [Pet], { nullable: true })
   pets: [Pet];
 }
